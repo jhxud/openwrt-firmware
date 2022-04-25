@@ -20,6 +20,6 @@
 
 sed -i "s,'eth1' 'eth0','eth0' 'eth1',g" target/linux/rockchip/armv8/base-files/etc/board.d/02_network
 
-sed -i "s/DEFAULT_PACKAGES:=/DEFAULT_PACKAGES:=luci luci-base luci-compat luci-lib-ipkg luci-app-firewall luci-app-opkg luci-app-autoreboot \
+sed -i "s/DEFAULT_PACKAGES:=/DEFAULT_PACKAGES:=luci luci-base luci-compat luci-app-turboacc luci-lib-ipkg luci-app-firewall luci-app-opkg luci-app-autoreboot \
 block-mount automount dnsmasq-full fdisk coremark wget-ssl curl htop bash iptables-mod-tproxy iptables-mod-extra \
 kmod-tun kmod-inet-diag kmod-nf-nathelper kmod-nf-nathelper-extra kmod-ipt-ra kmod-lib-zstd kmod-tcp-bbr kmod-usb2 kmod-usb3 /" include/target.mk
