@@ -18,8 +18,7 @@
 # echo 'src-git helloworld https://github.com/fw876/helloworld' >>feeds.conf.default
 # echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
 
-sed -i "s/DEFAULT_PACKAGES:=/DEFAULT_PACKAGES:=luci luci-app-advanced luci-app-firewall luci-app-gpsysupgrade luci-app-opkg luci-app-upnp luci-app-autoreboot \
-luci-app-wizard luci-app-attendedsysupgrade dnsmasq-full luci-base luci-compat luci-lib-ipkg fdisk \
-coremark wget-ssl curl htop nano zram-swap kmod-lib-zstd kmod-tcp-bbr bash \
-kmod-usb2 kmod-usb3 automount /" include/target.mk
+sed -i "s/DEFAULT_PACKAGES:=/DEFAULT_PACKAGES:=luci luci-newapi luci-app-firewall luci-app-opkg luci-app-autoreboot \
+block-mount automount dnsmasq-full fdisk coremark wget-ssl curl htop bash iptables-mod-tproxy iptables-mod-extra \
+kmod-tun kmod-inet-diag kmod-nf-nathelper kmod-nf-nathelper-extra kmod-ipt-ra kmod-lib-zstd kmod-tcp-bbr kmod-usb2 kmod-usb3 /" include/target.mk
 sed -i "/dnsmasq \\\/d" include/target.mk
